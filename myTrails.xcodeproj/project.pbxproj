@@ -19,6 +19,12 @@
 		5597B287140CB8EE0011F249 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5597B285140CB8EE0011F249 /* InfoPlist.strings */; };
 		5597B289140CB8EE0011F249 /* myTrailsTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 5597B288140CB8EE0011F249 /* myTrailsTests.h */; };
 		5597B28B140CB8EE0011F249 /* myTrailsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5597B28A140CB8EE0011F249 /* myTrailsTests.m */; };
+		55D4639D140CB951009C143A /* gpxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D46396140CB951009C143A /* gpxManager.m */; };
+		55D4639E140CB951009C143A /* GpxPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D46398140CB951009C143A /* GpxPoint.m */; };
+		55D4639F140CB951009C143A /* map.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4639A140CB951009C143A /* map.m */; };
+		55D463A0140CB951009C143A /* maps.html in Resources */ = {isa = PBXBuildFile; fileRef = 55D4639B140CB951009C143A /* maps.html */; };
+		55D463A1140CB951009C143A /* Track 035.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 55D4639C140CB951009C143A /* Track 035.gpx */; };
+		55D463A8140CBC60009C143A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D463A7140CBC60009C143A /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,21 +43,30 @@
 		5597B25F140CB8EE0011F249 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5597B260140CB8EE0011F249 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5597B261140CB8EE0011F249 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5597B264140CB8EE0011F249 /* myTrails-Info.plist */ = {isa = PBXFileReference; path = "myTrails-Info.plist"; sourceTree = "<group>"; };
+		5597B264140CB8EE0011F249 /* myTrails-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "myTrails-Info.plist"; sourceTree = "<group>"; };
 		5597B266140CB8EE0011F249 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5597B268140CB8EE0011F249 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5597B26A140CB8EE0011F249 /* myTrails-Prefix.pch */ = {isa = PBXFileReference; path = "myTrails-Prefix.pch"; sourceTree = "<group>"; };
+		5597B26A140CB8EE0011F249 /* myTrails-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myTrails-Prefix.pch"; sourceTree = "<group>"; };
 		5597B26C140CB8EE0011F249 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		5597B26E140CB8EE0011F249 /* myTrailsAppDelegate.h */ = {isa = PBXFileReference; path = myTrailsAppDelegate.h; sourceTree = "<group>"; };
+		5597B26E140CB8EE0011F249 /* myTrailsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myTrailsAppDelegate.h; sourceTree = "<group>"; };
 		5597B26F140CB8EE0011F249 /* myTrailsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myTrailsAppDelegate.m; sourceTree = "<group>"; };
 		5597B272140CB8EE0011F249 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5597B275140CB8EE0011F249 /* myTrails.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myTrails.xcdatamodel; sourceTree = "<group>"; };
 		5597B27C140CB8EE0011F249 /* myTrailsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myTrailsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5597B27D140CB8EE0011F249 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		5597B284140CB8EE0011F249 /* myTrailsTests-Info.plist */ = {isa = PBXFileReference; path = "myTrailsTests-Info.plist"; sourceTree = "<group>"; };
+		5597B284140CB8EE0011F249 /* myTrailsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "myTrailsTests-Info.plist"; sourceTree = "<group>"; };
 		5597B286140CB8EE0011F249 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5597B288140CB8EE0011F249 /* myTrailsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myTrailsTests.h; sourceTree = "<group>"; };
 		5597B28A140CB8EE0011F249 /* myTrailsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myTrailsTests.m; sourceTree = "<group>"; };
+		55D46395140CB951009C143A /* gpxManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gpxManager.h; sourceTree = "<group>"; };
+		55D46396140CB951009C143A /* gpxManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gpxManager.m; sourceTree = "<group>"; };
+		55D46397140CB951009C143A /* GpxPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GpxPoint.h; sourceTree = "<group>"; };
+		55D46398140CB951009C143A /* GpxPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GpxPoint.m; sourceTree = "<group>"; };
+		55D46399140CB951009C143A /* map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = map.h; sourceTree = "<group>"; };
+		55D4639A140CB951009C143A /* map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = map.m; sourceTree = "<group>"; };
+		55D4639B140CB951009C143A /* maps.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = maps.html; sourceTree = "<group>"; };
+		55D4639C140CB951009C143A /* Track 035.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Track 035.gpx"; sourceTree = "<group>"; };
+		55D463A7140CBC60009C143A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55D463A8140CBC60009C143A /* WebKit.framework in Frameworks */,
 				5597B25D140CB8EE0011F249 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +94,7 @@
 		5597B24D140CB8EE0011F249 = {
 			isa = PBXGroup;
 			children = (
+				55D463A7140CBC60009C143A /* WebKit.framework */,
 				5597B262140CB8EE0011F249 /* myTrails */,
 				5597B282140CB8EE0011F249 /* myTrailsTests */,
 				5597B25B140CB8EE0011F249 /* Frameworks */,
@@ -117,6 +134,14 @@
 		5597B262140CB8EE0011F249 /* myTrails */ = {
 			isa = PBXGroup;
 			children = (
+				55D46395140CB951009C143A /* gpxManager.h */,
+				55D46396140CB951009C143A /* gpxManager.m */,
+				55D46397140CB951009C143A /* GpxPoint.h */,
+				55D46398140CB951009C143A /* GpxPoint.m */,
+				55D46399140CB951009C143A /* map.h */,
+				55D4639A140CB951009C143A /* map.m */,
+				55D4639B140CB951009C143A /* maps.html */,
+				55D4639C140CB951009C143A /* Track 035.gpx */,
 				5597B26E140CB8EE0011F249 /* myTrailsAppDelegate.h */,
 				5597B26F140CB8EE0011F249 /* myTrailsAppDelegate.m */,
 				5597B271140CB8EE0011F249 /* MainMenu.xib */,
@@ -227,6 +252,8 @@
 				5597B267140CB8EE0011F249 /* InfoPlist.strings in Resources */,
 				5597B26D140CB8EE0011F249 /* Credits.rtf in Resources */,
 				5597B273140CB8EE0011F249 /* MainMenu.xib in Resources */,
+				55D463A0140CB951009C143A /* maps.html in Resources */,
+				55D463A1140CB951009C143A /* Track 035.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +292,9 @@
 				5597B269140CB8EE0011F249 /* main.m in Sources */,
 				5597B270140CB8EE0011F249 /* myTrailsAppDelegate.m in Sources */,
 				5597B276140CB8EE0011F249 /* myTrails.xcdatamodeld in Sources */,
+				55D4639D140CB951009C143A /* gpxManager.m in Sources */,
+				55D4639E140CB951009C143A /* GpxPoint.m in Sources */,
+				55D4639F140CB951009C143A /* map.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +466,7 @@
 				5597B290140CB8EE0011F249 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5597B291140CB8EE0011F249 /* Build configuration list for PBXNativeTarget "myTrailsTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +475,7 @@
 				5597B293140CB8EE0011F249 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

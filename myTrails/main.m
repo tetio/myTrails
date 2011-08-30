@@ -2,7 +2,7 @@
 //  main.m
 //  myTrails
 //
-//  Created by Sergi Maymi on 30/08/11.
+//  Created by Sergi Maymi on 26/08/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
