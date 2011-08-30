@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        doc = [[NSXMLDocument alloc] initWithXMLString:[NSString stringWithContentsOfFile:@"track 035.gpx"]];
+       // aqui cal posar el que calgui  
     }
     
     return self;
@@ -30,6 +30,16 @@
     }
     return self;
 }
+
+-(void)processData:(NSSTring *) filename {
+    doc = [[NSXMLDocument alloc] initWithXMLString:[NSString stringWithContentsOfFile:filename]];
+    NSXMLElement *elem = [doc rootElement];
+    if (elem == nil) {
+        elem = nil;
+    }
+    
+}
+
 
 -(void)processData {
     NSXMLElement *elem = [doc rootElement];
