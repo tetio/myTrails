@@ -16,5 +16,6 @@
 }
 
 - (id)initWithFilename:(NSString *)filename;
+-(id)loadXml:(NSString *)filename;
 - (void)processData;
 @end

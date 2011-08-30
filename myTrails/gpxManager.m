@@ -25,20 +25,19 @@
 {
     self = [super init];
     if (self) {
-        doc = [[NSXMLDocument alloc] initWithXMLString:filename];
-        [self processData];
+        [[self loadXml:filename] processData];
     }
     return self;
 }
 
--(void)processData:(NSString *) filename {
-    doc = [[NSXMLDocument alloc] initWithXMLString:[NSString stringWithContentsOfFile:filename]];
-    NSXMLElement *elem = [doc rootElement];
-    if (elem == nil) {
-        elem = nil;
-    }
-    
+-(id)loadXml:(NSString *)filename {
+    NSError *err = nil;
+    NSString *xml = [NSString stringWithContentsOfFile:filename encoding:NSUTF8StringEncoding error:&err];
+    doc = [[NSXMLDocument alloc] initWithXMLString:xml options:NSXMLDocumentTidyXML error:&err];
+    return self;
 }
+
+
 
 
 -(void)processData {
