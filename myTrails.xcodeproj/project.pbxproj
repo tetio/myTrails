@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5597B25D140CB8EE0011F249 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5597B25C140CB8EE0011F249 /* Cocoa.framework */; };
+		5597B267140CB8EE0011F249 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5597B265140CB8EE0011F249 /* InfoPlist.strings */; };
+		5597B269140CB8EE0011F249 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5597B268140CB8EE0011F249 /* main.m */; };
+		5597B26D140CB8EE0011F249 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5597B26B140CB8EE0011F249 /* Credits.rtf */; };
+		5597B270140CB8EE0011F249 /* myTrailsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5597B26F140CB8EE0011F249 /* myTrailsAppDelegate.m */; };
+		5597B273140CB8EE0011F249 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5597B271140CB8EE0011F249 /* MainMenu.xib */; };
+		5597B276140CB8EE0011F249 /* myTrails.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5597B274140CB8EE0011F249 /* myTrails.xcdatamodeld */; };
+		5597B27E140CB8EE0011F249 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5597B27D140CB8EE0011F249 /* SenTestingKit.framework */; };
+		5597B27F140CB8EE0011F249 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5597B25C140CB8EE0011F249 /* Cocoa.framework */; };
+		5597B287140CB8EE0011F249 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5597B285140CB8EE0011F249 /* InfoPlist.strings */; };
+		5597B289140CB8EE0011F249 /* myTrailsTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 5597B288140CB8EE0011F249 /* myTrailsTests.h */; };
+		5597B28B140CB8EE0011F249 /* myTrailsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5597B28A140CB8EE0011F249 /* myTrailsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5597B280140CB8EE0011F249 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5597B24F140CB8EE0011F249 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5597B257140CB8EE0011F249;
+			remoteInfo = myTrails;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5597B258140CB8EE0011F249 /* myTrails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myTrails.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5597B25C140CB8EE0011F249 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5597B25F140CB8EE0011F249 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		5597B260140CB8EE0011F249 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5597B261140CB8EE0011F249 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5597B264140CB8EE0011F249 /* myTrails-Info.plist */ = {isa = PBXFileReference; path = "myTrails-Info.plist"; sourceTree = "<group>"; };
+		5597B266140CB8EE0011F249 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5597B268140CB8EE0011F249 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5597B26A140CB8EE0011F249 /* myTrails-Prefix.pch */ = {isa = PBXFileReference; path = "myTrails-Prefix.pch"; sourceTree = "<group>"; };
+		5597B26C140CB8EE0011F249 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		5597B26E140CB8EE0011F249 /* myTrailsAppDelegate.h */ = {isa = PBXFileReference; path = myTrailsAppDelegate.h; sourceTree = "<group>"; };
+		5597B26F140CB8EE0011F249 /* myTrailsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myTrailsAppDelegate.m; sourceTree = "<group>"; };
+		5597B272140CB8EE0011F249 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5597B275140CB8EE0011F249 /* myTrails.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myTrails.xcdatamodel; sourceTree = "<group>"; };
+		5597B27C140CB8EE0011F249 /* myTrailsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myTrailsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5597B27D140CB8EE0011F249 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5597B284140CB8EE0011F249 /* myTrailsTests-Info.plist */ = {isa = PBXFileReference; path = "myTrailsTests-Info.plist"; sourceTree = "<group>"; };
+		5597B286140CB8EE0011F249 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5597B288140CB8EE0011F249 /* myTrailsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myTrailsTests.h; sourceTree = "<group>"; };
+		5597B28A140CB8EE0011F249 /* myTrailsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myTrailsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5597B255140CB8EE0011F249 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5597B25D140CB8EE0011F249 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5597B278140CB8EE0011F249 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5597B27E140CB8EE0011F249 /* SenTestingKit.framework in Frameworks */,
+				5597B27F140CB8EE0011F249 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5597B24D140CB8EE0011F249 = {
+			isa = PBXGroup;
+			children = (
+				5597B262140CB8EE0011F249 /* myTrails */,
+				5597B282140CB8EE0011F249 /* myTrailsTests */,
+				5597B25B140CB8EE0011F249 /* Frameworks */,
+				5597B259140CB8EE0011F249 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5597B259140CB8EE0011F249 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5597B258140CB8EE0011F249 /* myTrails.app */,
+				5597B27C140CB8EE0011F249 /* myTrailsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5597B25B140CB8EE0011F249 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5597B25C140CB8EE0011F249 /* Cocoa.framework */,
+				5597B27D140CB8EE0011F249 /* SenTestingKit.framework */,
+				5597B25E140CB8EE0011F249 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5597B25E140CB8EE0011F249 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5597B25F140CB8EE0011F249 /* AppKit.framework */,
+				5597B260140CB8EE0011F249 /* CoreData.framework */,
+				5597B261140CB8EE0011F249 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		5597B262140CB8EE0011F249 /* myTrails */ = {
+			isa = PBXGroup;
+			children = (
+				5597B26E140CB8EE0011F249 /* myTrailsAppDelegate.h */,
+				5597B26F140CB8EE0011F249 /* myTrailsAppDelegate.m */,
+				5597B271140CB8EE0011F249 /* MainMenu.xib */,
+				5597B274140CB8EE0011F249 /* myTrails.xcdatamodeld */,
+				5597B263140CB8EE0011F249 /* Supporting Files */,
+			);
+			path = myTrails;
+			sourceTree = "<group>";
+		};
+		5597B263140CB8EE0011F249 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5597B264140CB8EE0011F249 /* myTrails-Info.plist */,
+				5597B265140CB8EE0011F249 /* InfoPlist.strings */,
+				5597B268140CB8EE0011F249 /* main.m */,
+				5597B26A140CB8EE0011F249 /* myTrails-Prefix.pch */,
+				5597B26B140CB8EE0011F249 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5597B282140CB8EE0011F249 /* myTrailsTests */ = {
+			isa = PBXGroup;
+			children = (
+				5597B288140CB8EE0011F249 /* myTrailsTests.h */,
+				5597B28A140CB8EE0011F249 /* myTrailsTests.m */,
+				5597B283140CB8EE0011F249 /* Supporting Files */,
+			);
+			path = myTrailsTests;
+			sourceTree = "<group>";
+		};
+		5597B283140CB8EE0011F249 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5597B284140CB8EE0011F249 /* myTrailsTests-Info.plist */,
+				5597B285140CB8EE0011F249 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5597B257140CB8EE0011F249 /* myTrails */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5597B28E140CB8EE0011F249 /* Build configuration list for PBXNativeTarget "myTrails" */;
+			buildPhases = (
+				5597B254140CB8EE0011F249 /* Sources */,
+				5597B255140CB8EE0011F249 /* Frameworks */,
+				5597B256140CB8EE0011F249 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = myTrails;
+			productName = myTrails;
+			productReference = 5597B258140CB8EE0011F249 /* myTrails.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5597B27B140CB8EE0011F249 /* myTrailsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5597B291140CB8EE0011F249 /* Build configuration list for PBXNativeTarget "myTrailsTests" */;
+			buildPhases = (
+				5597B277140CB8EE0011F249 /* Sources */,
+				5597B278140CB8EE0011F249 /* Frameworks */,
+				5597B279140CB8EE0011F249 /* Resources */,
+				5597B27A140CB8EE0011F249 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5597B281140CB8EE0011F249 /* PBXTargetDependency */,
+			);
+			name = myTrailsTests;
+			productName = myTrailsTests;
+			productReference = 5597B27C140CB8EE0011F249 /* myTrailsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5597B24F140CB8EE0011F249 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 5597B252140CB8EE0011F249 /* Build configuration list for PBXProject "myTrails" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5597B24D140CB8EE0011F249;
+			productRefGroup = 5597B259140CB8EE0011F249 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5597B257140CB8EE0011F249 /* myTrails */,
+				5597B27B140CB8EE0011F249 /* myTrailsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5597B256140CB8EE0011F249 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5597B267140CB8EE0011F249 /* InfoPlist.strings in Resources */,
+				5597B26D140CB8EE0011F249 /* Credits.rtf in Resources */,
+				5597B273140CB8EE0011F249 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5597B279140CB8EE0011F249 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5597B287140CB8EE0011F249 /* InfoPlist.strings in Resources */,
+				5597B289140CB8EE0011F249 /* myTrailsTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5597B27A140CB8EE0011F249 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5597B254140CB8EE0011F249 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5597B269140CB8EE0011F249 /* main.m in Sources */,
+				5597B270140CB8EE0011F249 /* myTrailsAppDelegate.m in Sources */,
+				5597B276140CB8EE0011F249 /* myTrails.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5597B277140CB8EE0011F249 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5597B28B140CB8EE0011F249 /* myTrailsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5597B281140CB8EE0011F249 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5597B257140CB8EE0011F249 /* myTrails */;
+			targetProxy = 5597B280140CB8EE0011F249 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5597B265140CB8EE0011F249 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5597B266140CB8EE0011F249 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5597B26B140CB8EE0011F249 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5597B26C140CB8EE0011F249 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		5597B271140CB8EE0011F249 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5597B272140CB8EE0011F249 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		5597B285140CB8EE0011F249 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5597B286140CB8EE0011F249 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5597B28C140CB8EE0011F249 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5597B28D140CB8EE0011F249 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5597B28F140CB8EE0011F249 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "myTrails/myTrails-Prefix.pch";
+				INFOPLIST_FILE = "myTrails/myTrails-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5597B290140CB8EE0011F249 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "myTrails/myTrails-Prefix.pch";
+				INFOPLIST_FILE = "myTrails/myTrails-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5597B292140CB8EE0011F249 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/myTrails.app/Contents/MacOS/myTrails";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "myTrails/myTrails-Prefix.pch";
+				INFOPLIST_FILE = "myTrailsTests/myTrailsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5597B293140CB8EE0011F249 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/myTrails.app/Contents/MacOS/myTrails";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "myTrails/myTrails-Prefix.pch";
+				INFOPLIST_FILE = "myTrailsTests/myTrailsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5597B252140CB8EE0011F249 /* Build configuration list for PBXProject "myTrails" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5597B28C140CB8EE0011F249 /* Debug */,
+				5597B28D140CB8EE0011F249 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5597B28E140CB8EE0011F249 /* Build configuration list for PBXNativeTarget "myTrails" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5597B28F140CB8EE0011F249 /* Debug */,
+				5597B290140CB8EE0011F249 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5597B291140CB8EE0011F249 /* Build configuration list for PBXNativeTarget "myTrailsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5597B292140CB8EE0011F249 /* Debug */,
+				5597B293140CB8EE0011F249 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5597B274140CB8EE0011F249 /* myTrails.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5597B275140CB8EE0011F249 /* myTrails.xcdatamodel */,
+			);
+			currentVersion = 5597B275140CB8EE0011F249 /* myTrails.xcdatamodel */;
+			path = myTrails.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5597B24F140CB8EE0011F249 /* Project object */;
+}
