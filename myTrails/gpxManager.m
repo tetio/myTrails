@@ -31,7 +31,7 @@
     return self;
 }
 
--(void)processData:(NSSTring *) filename {
+-(void)processData:(NSString *) filename {
     doc = [[NSXMLDocument alloc] initWithXMLString:[NSString stringWithContentsOfFile:filename]];
     NSXMLElement *elem = [doc rootElement];
     if (elem == nil) {
