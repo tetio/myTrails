@@ -94,7 +94,6 @@
 		5597B24D140CB8EE0011F249 = {
 			isa = PBXGroup;
 			children = (
-				55D463A7140CBC60009C143A /* WebKit.framework */,
 				5597B262140CB8EE0011F249 /* myTrails */,
 				5597B282140CB8EE0011F249 /* myTrailsTests */,
 				5597B25B140CB8EE0011F249 /* Frameworks */,
@@ -114,6 +113,7 @@
 		5597B25B140CB8EE0011F249 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55D463A7140CBC60009C143A /* WebKit.framework */,
 				5597B25C140CB8EE0011F249 /* Cocoa.framework */,
 				5597B27D140CB8EE0011F249 /* SenTestingKit.framework */,
 				5597B25E140CB8EE0011F249 /* Other Frameworks */,
