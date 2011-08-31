@@ -42,6 +42,7 @@
     doc = [[NSXMLDocument alloc] initWithXMLString:xml options:NSXMLDocumentTidyXML error:&err];
 
     [err release];
+// sembla que no cal    
     [xml release];
 
     return self;
@@ -51,26 +52,74 @@
 
 
 -(void)processData {
-    NSString *XPath = @"/gpx/trk/trkseg/trkpt";
+//    NSString *XPath = @"/gpx/trk/trkseg/trkpt";
+    NSString *XPath = @"//trkpt";
     NSError *err = nil;
-    NSString *lat;
-    NSString *lon;
-    NSString *ele;
+    double lat;
+    double lon;
+    double ele;
     NSString *time;
-    
+    NSDate *date;
+    double lastLat;
+    double lastLon;
+    double lastEle;
+    NSDate *lastDate;
+    double incEle;
+    double totalAsc = 0;
+    double totalDes = 0;    
+    NSXMLElement *trkpt;
+    NSXMLElement *lastTrkpt;
     NSArray *nodes = [doc nodesForXPath:XPath error:&err];
     
+    
     if ([nodes count] > 0) {
-        for (NSXMLElement *trkpt in nodes) {
-            ele = [[[trkpt elementsForName:@"ele"] objectAtIndex:0] XMLString];
-            time = [[[trkpt elementsForName:@"time"] objectAtIndex:0] XMLString];
-            lat = [[trkpt attributeForName:@"lat"] XMLString];
-            lon = [[trkpt attributeForName:@"lon"] XMLString];
+        for (int i = 1; i < [nodes count]; i++) {
+            lastTrkpt = [nodes objectAtIndex:i-1];
+            trkpt = [nodes objectAtIndex:i];
+            
+            lastEle = [[[[lastTrkpt elementsForName:@"ele"] objectAtIndex:0] stringValue] doubleValue];
+            time = [[[lastTrkpt elementsForName:@"time"] objectAtIndex:0] stringValue] ;
+            lastLat = [[[lastTrkpt attributeForName:@"lat"] stringValue] doubleValue];
+            lastLon = [[[lastTrkpt attributeForName:@"lon"] stringValue] doubleValue];
+            time = [[[time stringByReplacingOccurrencesOfString:@"T" withString:@" "]  stringByReplacingOccurrencesOfString:@"Z" withString:@""] stringByAppendingString:@" +0000"];
+            lastDate = [NSDate dateWithString:time];
+            
+            ele = [[[[trkpt elementsForName:@"ele"] objectAtIndex:0] stringValue] doubleValue];
+            time = [[[trkpt elementsForName:@"time"] objectAtIndex:0] stringValue] ;
+            lat = [[[trkpt attributeForName:@"lat"] stringValue] doubleValue];
+            lon = [[[trkpt attributeForName:@"lon"] stringValue] doubleValue];
+            time = [[[time stringByReplacingOccurrencesOfString:@"T" withString:@" "]  stringByReplacingOccurrencesOfString:@"Z" withString:@""] stringByAppendingString:@" +0000"];
+            date = [NSDate dateWithString:time];
+            
+            incEle = lastEle - ele;
+            if (incEle > 0) {
+                totalAsc += incEle;
+            } else if (incEle < 0) {
+                totalDes -= incEle;
+            }
+        
         }
     }
 
+    // Xivatos
+    NSLog(@"Total asc/desc[%g/%g]", totalAsc, totalDes );
+    
     [err release];
+    // sembla que no cal    
     [nodes release];
 }
 
+- (double)calculateDistance:(double)lastLon lastLat:(double)lastLat lon:(double)lon lat:(double)lat  {
+    // Haversine formula
+    int R = 6371; // km
+    double dLat = (lat-lastLat) * M_PI / 180;
+    double dLon = (lon-lastLon) * M_PI / 180;
+    double lat1 = lat * M_PI / 180;
+    double lat2 = lastLat * M_PI / 180;    
+    double a = sin(dLat/2) * sin(dLat/2) + sin(dLon/2) * sin(dLon/2) * cos(lat1) * cos(lat2); 
+    double c = 2 * atan2(sqrt(a), sqrt(1-a)); 
+    double d = R * c;
+    
+    return d;
+}
 @end
