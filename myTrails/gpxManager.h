@@ -11,11 +11,15 @@
 @interface GpxManager : NSObject {
     NSXMLDocument *doc;
     double asc;
-    double desc;
+    double des;    
+    double meanVel;
     double maxVel;
+    double dist;
 }
 
 - (id)initWithFilename:(NSString *)filename;
--(id)loadXml:(NSString *)filename;
+- (id)loadXml:(NSString *)filename;
 - (void)processData;
+- (double)calculateDistance:(double)lastLon lastLat:(double)lastLat lon:(double)lon lat:(double)lat;
+
 @end

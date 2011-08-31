@@ -43,7 +43,7 @@
 
     [err release];
 // sembla que no cal    
-    [xml release];
+//    [xml release];
 
     return self;
 }
@@ -65,8 +65,6 @@
     double lastEle;
     NSDate *lastDate;
     double incEle;
-    double totalAsc = 0;
-    double totalDes = 0;    
     NSXMLElement *trkpt;
     NSXMLElement *lastTrkpt;
     NSArray *nodes = [doc nodesForXPath:XPath error:&err];
@@ -93,20 +91,21 @@
             
             incEle = lastEle - ele;
             if (incEle > 0) {
-                totalAsc += incEle;
+                asc += incEle;
             } else if (incEle < 0) {
-                totalDes -= incEle;
+                des -= incEle;
             }
-        
+            dist += [self calculateDistance:lastLon lastLat:lastLat lon:lon lat:lat];
         }
     }
 
     // Xivatos
-    NSLog(@"Total asc/desc[%g/%g]", totalAsc, totalDes );
+    NSLog(@"Total asc/desc[%g/%g]", asc, des );
+    NSLog(@"Distance: %g]", dist );
     
     [err release];
     // sembla que no cal    
-    [nodes release];
+    [doc release];
 }
 
 - (double)calculateDistance:(double)lastLon lastLat:(double)lastLat lon:(double)lon lat:(double)lat  {
