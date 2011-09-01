@@ -7,14 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Track.h"
 
 @interface GpxManager : NSObject {
-    NSXMLDocument *doc;
-    double asc;
-    double des;    
-    double meanVel;
-    double maxVel;
-    double dist;
+    Track *track;
 }
 
 - (id)initWithFilename:(NSString *)filename;

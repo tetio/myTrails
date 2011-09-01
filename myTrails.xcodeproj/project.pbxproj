@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5543BD49140F52D6004B8310 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 5543BD48140F52D6004B8310 /* Track.m */; };
 		5597B25D140CB8EE0011F249 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5597B25C140CB8EE0011F249 /* Cocoa.framework */; };
 		5597B267140CB8EE0011F249 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5597B265140CB8EE0011F249 /* InfoPlist.strings */; };
 		5597B269140CB8EE0011F249 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5597B268140CB8EE0011F249 /* main.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5543BD47140F52D6004B8310 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		5543BD48140F52D6004B8310 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
 		5597B258140CB8EE0011F249 /* myTrails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myTrails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5597B25C140CB8EE0011F249 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5597B25F140CB8EE0011F249 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -147,6 +150,8 @@
 				5597B271140CB8EE0011F249 /* MainMenu.xib */,
 				5597B274140CB8EE0011F249 /* myTrails.xcdatamodeld */,
 				5597B263140CB8EE0011F249 /* Supporting Files */,
+				5543BD47140F52D6004B8310 /* Track.h */,
+				5543BD48140F52D6004B8310 /* Track.m */,
 			);
 			path = myTrails;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 				55D4639D140CB951009C143A /* gpxManager.m in Sources */,
 				55D4639E140CB951009C143A /* GpxPoint.m in Sources */,
 				55D4639F140CB951009C143A /* map.m in Sources */,
+				5543BD49140F52D6004B8310 /* Track.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

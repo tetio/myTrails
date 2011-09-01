@@ -7,6 +7,7 @@
 //
 
 #import "gpxManager.h"
+#import "Track.h"
 
 @implementation GpxManager
 
@@ -31,19 +32,17 @@
 }
 
 -(void)dealloc {
-    [doc dealloc];
-    doc = nil;
+    [track dealloc];
+    track = nil;
 }
 
 
 -(id)loadXml:(NSString *)filename {
     NSError *err = nil;
     NSString *xml = [NSString stringWithContentsOfFile:filename encoding:NSUTF8StringEncoding error:&err];
-    doc = [[NSXMLDocument alloc] initWithXMLString:xml options:NSXMLDocumentTidyXML error:&err];
+    track = [[Track alloc] initWithXMLString:xml options:NSXMLDocumentTidyXML error:&err];
 
     [err release];
-// sembla que no cal    
-//    [xml release];
 
     return self;
 }
@@ -67,7 +66,7 @@
     double incEle;
     NSXMLElement *trkpt;
     NSXMLElement *lastTrkpt;
-    NSArray *nodes = [doc nodesForXPath:XPath error:&err];
+    NSArray *nodes = [track nodesForXPath:XPath error:&err];
     
     
     if ([nodes count] > 0) {
@@ -91,21 +90,20 @@
             
             incEle = lastEle - ele;
             if (incEle > 0) {
-                asc += incEle;
+                [track incAsc:incEle];
             } else if (incEle < 0) {
-                des -= incEle;
+                [track decDes:incEle];
             }
-            dist += [self calculateDistance:lastLon lastLat:lastLat lon:lon lat:lat];
+            [track incDist:[self calculateDistance:lastLon lastLat:lastLat lon:lon lat:lat]];
         }
     }
 
     // Xivatos
-    NSLog(@"Total asc/desc[%g/%g]", asc, des );
-    NSLog(@"Distance: %g]", dist );
+    NSLog(@"Total asc/desc[%g/%g]", [track getAsc], [track getDes]);
+    NSLog(@"Distance: %g]", [track getDist]);
     
     [err release];
-    // sembla que no cal    
-    [doc release];
+    // sembla que no cal        [track release];
 }
 
 - (double)calculateDistance:(double)lastLon lastLat:(double)lastLat lon:(double)lon lat:(double)lat  {
