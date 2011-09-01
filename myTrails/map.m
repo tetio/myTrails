@@ -33,18 +33,38 @@
 }
 
 -(IBAction)fileChooser:sender {
+    NSString *filename;
+    GpxManager *gpxManager;
+    
     NSOpenPanel *op = [NSOpenPanel openPanel];
     if ([op runModal] == NSOKButton) 
     {
         filename = [op filename];
-    }  
+    }
     gpxManager = [[GpxManager alloc] initWithFilename:filename];
+    NSString * polyLine = [gpxManager processData];
+    
+    id map = [mapView windowScriptObject];
+    NSString *jsCmd = @"map.addOverlay(new GPolyline([";
+    jsCmd = [jsCmd stringByAppendingString:polyLine];
+    jsCmd = [jsCmd stringByAppendingString:@"], '#FF0000', 10));"];
+    [map evaluateWebScript:jsCmd];    
 }
 
 
 -(void)dealloc {
-    [gpxManager dealloc];
-    gpxManager = nil;
 }
 
+/*
+var polyline = new GPolyline([
+                              new GLatLng(41.2426668, 1.7461682),
+                              new GLatLng(41.2414942, 1.7468375),
+                              new GLatLng(41.2446270, 1.7577317)
+                              ], "#FF0000", 10);
+map.addOverlay(new GPolyline([
+                              new GLatLng(41.2426668, 1.7461682),
+                              new GLatLng(41.2414942, 1.7468375),
+                              new GLatLng(41.2446270, 1.7577317)
+                              ], "#FF0000", 10););
+ */
 @end

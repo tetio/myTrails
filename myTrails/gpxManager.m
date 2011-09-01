@@ -26,7 +26,7 @@
 {
     self = [super init];
     if (self) {
-        [[self loadXml:filename] processData];
+        [self loadXml:filename];
     }
     return self;
 }
@@ -50,12 +50,14 @@
 
 
 
--(void)processData {
+-(NSString *)processData {
 //    NSString *XPath = @"/gpx/trk/trkseg/trkpt";
     NSString *XPath = @"//trkpt";
     NSError *err = nil;
     double lat;
     double lon;
+    NSString *sLat;
+    NSString *sLon;    
     double ele;
     NSString *time;
     NSDate *date;
@@ -67,7 +69,11 @@
     NSXMLElement *trkpt;
     NSXMLElement *lastTrkpt;
     NSArray *nodes = [track nodesForXPath:XPath error:&err];
-    
+    double dT;
+    double dD;
+    double velo;
+    double lastVelo;
+
     
     if ([nodes count] > 0) {
         for (int i = 1; i < [nodes count]; i++) {
@@ -82,9 +88,11 @@
             lastDate = [NSDate dateWithString:time];
             
             ele = [[[[trkpt elementsForName:@"ele"] objectAtIndex:0] stringValue] doubleValue];
-            time = [[[trkpt elementsForName:@"time"] objectAtIndex:0] stringValue] ;
-            lat = [[[trkpt attributeForName:@"lat"] stringValue] doubleValue];
-            lon = [[[trkpt attributeForName:@"lon"] stringValue] doubleValue];
+            time = [[[trkpt elementsForName:@"time"] objectAtIndex:0] stringValue];
+            sLat = [[trkpt attributeForName:@"lat"] stringValue];
+            lat = [sLat doubleValue];
+            sLon = [[trkpt attributeForName:@"lon"] stringValue];
+            lon = [sLon doubleValue];
             time = [[[time stringByReplacingOccurrencesOfString:@"T" withString:@" "]  stringByReplacingOccurrencesOfString:@"Z" withString:@""] stringByAppendingString:@" +0000"];
             date = [NSDate dateWithString:time];
             
@@ -94,16 +102,36 @@
             } else if (incEle < 0) {
                 [track decDes:incEle];
             }
-            [track incDist:[self calculateDistance:lastLon lastLat:lastLat lon:lon lat:lat]];
+            dD = [self calculateDistance:lastLon lastLat:lastLat lon:lon lat:lat];
+            [track incDist:dD];
+            
+            
+            dT = (double) (([date timeIntervalSince1970]-[lastDate timeIntervalSince1970]))/(double) ((60*60));
+            if (dT > 0 && i > 1 && i <  [nodes count] - 1) {
+                lastVelo = velo;
+            	velo = dD/dT;
+            }
+            if (velo > 45 && (abs(velo - lastVelo) > 10))
+                NSLog(@"Punt on velocitat és absurda %f %f (%f,%f),(%f,%f)", velo, velo - lastVelo, lastLat, lastLon, lat, lon);
+            
+            if ((abs(velo - lastVelo) < 10) && velo > [track getMaxVel]) {
+            	[track setMaxVel:velo];
+            }            
+            
+            if ((i-1) % 4 == 0)
+                [track addPointToPolyline:sLat lon:sLon];
         }
     }
 
     // Xivatos
     NSLog(@"Total asc/desc[%g/%g]", [track getAsc], [track getDes]);
     NSLog(@"Distance: %g]", [track getDist]);
+    NSLog(@"Max velocity: %g]", [track getMaxVel]);
     
     [err release];
     // sembla que no cal        [track release];
+    
+    return [track getJsPolyline];
 }
 
 - (double)calculateDistance:(double)lastLon lastLat:(double)lastLat lon:(double)lon lat:(double)lat  {
@@ -119,4 +147,6 @@
     
     return d;
 }
+
+
 @end

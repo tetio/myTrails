@@ -15,7 +15,6 @@
 
 - (id)initWithFilename:(NSString *)filename;
 - (id)loadXml:(NSString *)filename;
-- (void)processData;
+- (NSString *)processData;
 - (double)calculateDistance:(double)lastLon lastLat:(double)lastLat lon:(double)lon lat:(double)lat;
-
 @end

@@ -15,8 +15,6 @@
     IBOutlet NSButton *zoomIn;
     IBOutlet NSButton *zoomOut;
     IBOutlet NSButton *fileChooser;
-    NSString *filename;
-    GpxManager *gpxManager;
 }
 
 //@property (nonatomic, retain) GpxManager *gpxManager;

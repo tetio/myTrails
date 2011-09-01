@@ -13,16 +13,20 @@
     double des;    
     double meanVel;
     double maxVel;
-    double dist;    
+    double dist;
+    NSString *jsPolyline;
 }
 
--(id)init;
--(void) incAsc:(double)inc;
--(void) decDes:(double)desc;
--(void) incDist:(double)inc;
--(double) getDist;
--(double) getAsc;
--(double) getDes;
--(double) getMaxVel;
+- (id)init;
+- (void) incAsc:(double)inc;
+- (void) decDes:(double)desc;
+- (void) incDist:(double)inc;
+- (void) setMaxVel:(double)vel;
+- (double) getDist;
+- (double) getAsc;
+- (double) getDes;
+- (double) getMaxVel;
+- (NSString *) getJsPolyline;
+- (void)addPointToPolyline:(NSString *)lat lon:(NSString *)lon;
 
 @end
