@@ -22,7 +22,8 @@
 }
 
 - (void)dealloc {
-    [jsPolyline dealloc];
+    [jsPolyline release];
+    [super dealloc];
 }
 
 - (void)incAsc:(double)inc {

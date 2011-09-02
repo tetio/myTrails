@@ -42,13 +42,15 @@
         filename = [op filename];
     }
     gpxManager = [[GpxManager alloc] initWithFilename:filename];
-    NSString * polyLine = [gpxManager processData];
+    NSString *polyLine = [gpxManager processData];
     
     id map = [mapView windowScriptObject];
     NSString *jsCmd = @"map.addOverlay(new GPolyline([";
     jsCmd = [jsCmd stringByAppendingString:polyLine];
-    jsCmd = [jsCmd stringByAppendingString:@"], '#FF0000', 10));"];
-    [map evaluateWebScript:jsCmd];    
+    jsCmd = [jsCmd stringByAppendingString:@"], '#0000FF', 3));"];
+    [map evaluateWebScript:jsCmd];   
+    
+//    [gpxManager release];
 }
 
 

@@ -32,8 +32,10 @@
 }
 
 -(void)dealloc {
-    [track dealloc];
+    [track release];
     track = nil;
+    
+    [super dealloc];
 }
 
 
